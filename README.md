@@ -33,7 +33,7 @@ curl -F "file=@file-uploader/src/main/resources/config.properties" 127.0.0.1:808
 ```
 After that in tempory folder will be created file with random name.
 
-In docker-compose.yaml services will use one shared folder. This shared folder need to calculate requests for the Go exporter. Go exporter have authorization by token. Metrics route is /metrics.
+In docker-compose.yaml services will use one shared folder. This shared folder need for calculating requests for the Go exporter. Go exporter have authorization by token. Metrics route is /metrics.
 
 ##### Request example:
 ```
