@@ -15,8 +15,6 @@ public class Config {
         ClassLoader cl = Config.class.getClassLoader();
         final InputStream configPath = cl.getResourceAsStream("config.properties");
         properties.load(configPath);
-//        final String configPath = Config.class.getClassLoader().getResourceAsStream("resources/config.properties").getPath();
-//        properties.load(new FileInputStream(configPath));
     }
 
     private static Properties getConfig() {
