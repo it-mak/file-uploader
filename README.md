@@ -51,8 +51,8 @@ Each project have its own Dokerfile.
 - gradle - *gradle wraper*
 - build.gradle - *settings for build gradle*
 - go_exporter
-- main.go - *source code
-- go.mod/go.sum - *packets requirements
+- main.go - *source code*
+- go.mod/go.sum - *packets requirements*
 - docker-compose.yaml
 - run.sh - *manage script Options: deploy/destroy.*
 - test.sh - *smoke tests No args.*
