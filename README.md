@@ -40,7 +40,7 @@ In docker-compose.yaml services will use one shared folder. This shared folder n
 curl -s http://127.0.0.1:2112/metrics -H "Authorization:token"
 ```
 ## Project structure
-Each project have its own Dokerfile.
+Each project have its own Dockerfile.
 
 - file-uplodaer
 - src
