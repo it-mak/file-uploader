@@ -2,7 +2,7 @@
 ## Description
 File uploader is lightfull service that get file and store it on the disk. This service has been written with Java. Also, there is the custom exporter for it, that has been written with Go.
 
-## Test system:
+## Test system
 - Linux Ubuntu 18 / Alpine docker
 - Docker 20.10.7
 - Docker-compose 1.27.4
@@ -10,7 +10,7 @@ File uploader is lightfull service that get file and store it on the disk. This 
 - Gradle 7.1
 - Go 1.16.7
 
-## QUICK START
+## Quick start
 
 **You need to install docker and docker-compose to your system.**
 
