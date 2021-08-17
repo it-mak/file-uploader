@@ -1,7 +1,5 @@
-plugins {
-    id 'java'
-    id 'application'
-}
+apply plugin: 'java'
+apply plugin: 'application'
 
 repositories {
     mavenCentral()
@@ -14,6 +12,27 @@ dependencies {
 }
 
 application {
-    // Define the main class for the application
     mainClass = 'com.file.uploader.AppServer'
+}
+
+jar {
+    manifest {
+        attributes["Main-Class"] = application.mainClassName
+    }
+    from 'resources', {
+        into 'resources'
+    }
+}
+
+task fatJar(type: Jar) {
+    baseName = project.name + '-all'
+    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } } {
+        exclude "META-INF/*.SF"
+        exclude "META-INF/*.DSA"
+        exclude "META-INF/*.RSA"
+    }
+    with jar
+    manifest {
+        attributes 'Main-Class': 'com.file.uploader.AppServer'
+    }
 }

@@ -2,6 +2,7 @@ package com.file.uploader;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Map;
 import java.util.Properties;
 
@@ -10,8 +11,12 @@ public class Config {
     private static Map<String, String> items = null;
 
     private static void readConfig() throws IOException {
-        final String configPath = Config.class.getClassLoader().getResource("config.properties").getPath();
-        properties.load(new FileInputStream(configPath));
+
+        ClassLoader cl = Config.class.getClassLoader();
+        final InputStream configPath = cl.getResourceAsStream("config.properties");
+        properties.load(configPath);
+//        final String configPath = Config.class.getClassLoader().getResourceAsStream("resources/config.properties").getPath();
+//        properties.load(new FileInputStream(configPath));
     }
 
     private static Properties getConfig() {

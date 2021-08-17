@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  java_file_uploader:
+    build:
+      context: file-uploader
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    volumes:
+      - shared-volume:/tmp/shared
+  go_exporter:
+    build:
+      context: go_exporter
+      dockerfile: Dockerfile
+    environment:
+      - TOKEN=token
+    ports:
+      - "2112:2112"
+    volumes:
+      - shared-volume:/tmp/shared
+volumes:
+  shared-volume:
