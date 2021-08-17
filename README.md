@@ -37,7 +37,7 @@ In docker-compose.yaml services will use one shared folder. This shared folder n
 
 ##### Request example:
 ```
-curl -s http://127.0.0.1:2112/metrics -H "Authorization:token"
+curl http://127.0.0.1:2112/metrics -H "Authorization:token"
 ```
 ## Project structure
 Each project have its own Dockerfile.
