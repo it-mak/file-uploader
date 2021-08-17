@@ -22,7 +22,7 @@ cd file-uploader
 ```
 You will see the message if everything went well.
 
-Success! File uploader and Exporter works good! Total created files: 1
+>Success! File uploader and Exporter works good! Total created files: 1
 
 ## Common scheme
 Java web server start on 8081 port and wait for requests with any location.
